@@ -21,6 +21,7 @@ public class Main
 		//list.print();
 		System.out.println(list.toString());
 		
+		//**********problem with size methodssssssssssssssss
 		//System.out.println("The current size of the ");
 		System.out.println("\nThe current size of the array is: " + list.size());
 		System.out.println("\nThe current length of the array is: " + list.length() + "\n");
@@ -33,6 +34,7 @@ public class Main
 		//list.print();
 		System.out.println(list.toString());
 		
+		//**********problem with size methodssssssssssssssss
 		System.out.println("\nThe current size of the array is: " + list.size());
 		System.out.println("\nThe current length of the array is: " + list.length());
 	}
