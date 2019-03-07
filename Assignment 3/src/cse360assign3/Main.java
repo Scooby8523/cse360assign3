@@ -15,6 +15,8 @@ public class Main
 		list.insert(8);
 		list.insert(39);
 		list.insert(10);
+		list.insert(23);
+		list.insert(88);
 		
 		//list.print();
 		System.out.println(list.toString());

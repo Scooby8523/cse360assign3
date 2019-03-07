@@ -86,6 +86,7 @@ public class OrderedIntList
 	* (not the number of elements stored)
 	* 
 	* return size
+	* *********problem w/ size**************
 	*/
 	public int size(){
 		int size = array.length;
