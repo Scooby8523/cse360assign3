@@ -4,8 +4,10 @@
 * Assignment: Assignment 3
 * Description: This OrderedIntList will receive values and insert them into an
 * array. The program will check for duplicate values, will sort the values in
-* order and will also check for overflow. After all this is done, the values
-* will be printed......................
+* order, will return the size and length of the array and will also delete an item
+* from the array. It will then check the array and adjust it so there is no overflow
+* or make it smaller if it is more than 50% empty. After all this is done, the values
+* in the array will be returned.
 */
 
 
@@ -30,8 +32,8 @@ public class OrderedIntList
 	
 	/**  
 	* Insert the values into the array, sort,
-	* check for duplicates and overflow.
-	* If array is full, increase size by 50%.
+	* check for duplicates and increase capacity 
+	* of the array if it is full by 50%.
 	* 
 	* @param value Int variable inserted into the array.  
 	*/  
@@ -51,7 +53,6 @@ public class OrderedIntList
 			return;
 		}
 		
-		//*********
 		//check to see if array is full
 		//increase capacity by 50% if it is full
 		if(length() == size())
@@ -63,14 +64,6 @@ public class OrderedIntList
 			}
 			array = secondArray;
 		}
-		
-		/*//overflow adjustment: remove last value and add new value
-		if (secondIndex == 10) {
-			secondIndex = secondIndex-1;
-		}
-		if (counter == 10) {
-			counter = counter - 1;
-		}*/
 		
 		//move the element's index
 		int index = counter;
@@ -86,7 +79,6 @@ public class OrderedIntList
 	* (not the number of elements stored)
 	* 
 	* return size
-	* *********problem w/ size**************
 	*/
 	public int size(){
 		int size = array.length;
@@ -106,10 +98,10 @@ public class OrderedIntList
 	
 	/**  
 	* Identify item to be deleted check to see 
-	* if the item is in the array, if found remove it
+	* if the item is in the array, if found, remove it
 	* and move up all other numbers, maintain ascending order
 	* If array changes after deletion of item; make sure not more 
-	* than 50% empty, if so re-adjust
+	* than 50% empty, if so reduce capacity by 50%
 	* 
 	* @param key Int variable to identify number to be deleted.  
 	*/
